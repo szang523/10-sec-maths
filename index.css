@@ -1,4 +1,121 @@
-/*index.css*/
-h2 {
-    color: blue;
-  }
+body {
+    font-family: 'Pridi', serif;
+    font-size: 64px;
+    color: rgb(151, 87, 87);
+    background-color: bisque;
+}
+
+
+h1 {
+    font-size: 64px;
+}
+
+/* Game Content */
+#game-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game-input input{
+    border: 2px rgb(146, 34, 34) solid;
+    padding: 8px;
+    background: transparent;
+    text-align: center;
+    color: rgb(146, 34, 34);
+}
+
+#game-input input:focus {
+    outline: none;
+}
+
+#game-form {
+    margin-top: 50px;
+}
+
+/* Hide Spin BUtton */
+
+#game-input input::-webkit-inner-spin-button, 
+#game-input input::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+#game-form label {
+    color: rgb(23, 109, 87);
+    font-size: 24px;
+}
+
+.btn.active {
+    border:3px rgb(23, 109, 87) solid;
+    text-shadow: 1px 1px 3px rgb(97, 240, 152);
+}
+
+#game-form input[type='radio'] {
+    display: none;
+}
+
+/* Game Limit Form */
+#limit-form {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.limit-values {
+    font-size: 20px;
+    margin: 0;
+}
+
+#limit-form input {
+    -webkit-appearance: none;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgb(146, 34, 34) 0%, rgb(23, 109, 87) 50%);
+    border-radius: 30px;
+    /* border: 2px solid #fff; */
+}
+
+#limit-form input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: rgb(218, 230, 250);
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+}
+
+#limit-form input:focus {
+    outline: none;
+}
+
+/* Game Timer */
+#game-timer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom:0;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-timer-text {
+    font-size: 15rem;
+}
+
+.blur-away {
+    z-index: -2;
+    filter: blur(15px);
+    transition: ease-in 1s;
+}
+
+#game-data h2{
+    display: inline-block;
+    list-style: none;
+
+}
