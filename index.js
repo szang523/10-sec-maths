@@ -175,6 +175,7 @@ function Game(problem,operation,userInput) {
         var that = this;
         var count = 0;
         $('#game-timer').toggleClass('blur-away');
+        //$('#game-settings').toggleClass('blur-away');
         gameInput.prop('disabled', true);
         gameOutput.toggleClass('blur-away');
         var timer = setInterval(function() {
@@ -209,11 +210,11 @@ var blurButtons = function() {
     $('input[name=operations]').each(function(){
         if (!$(this).is(':checked')) {
             $(this).parent().toggleClass('blur-away');
-            $(this).parent().unbind();
+            //$(this).parent().unbind();
         }
     })
     $('#limit-form').toggleClass('blur-away');
-    gameLimitInput.unbind();
+    //gameLimitInput.unbind();
 }
 
     
@@ -248,7 +249,7 @@ var gameStart = function() {
     gameInput.on('input',function() {
         var game = new Game(displayOutput,getOperation(),$(this).val());
         game.startRound();
-        blurButtons();
+        //blurButtons();
     });
 }
 // Inital Problem
