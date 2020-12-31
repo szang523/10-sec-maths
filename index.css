@@ -1,72 +1,99 @@
 body {
     font-family: 'Montserrat', serif;
+    color: #FFEFD3;
+    background-color: #75485E;
     font-size: 64px;
-    color: rgb(151, 87, 87);
-    background-color: bisque;
 }
-
 
 h1 {
     font-size: 64px;
 }
 
-/* Game Content */
+#game-data h3{
+    display: inline-block;
+    margin-left: 15px;
+    color: #FFC49B;
+    font-weight: bold;
+
+}
+
 #game-content {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-#game-input input{
-    border: 2px rgb(146, 34, 34) solid;
-    padding: 8px;
-    background: transparent;
-    text-align: center;
-    color: rgb(146, 34, 34);
+#game-form label {
+    color:#FFC49B;
+    margin: 0px 20px 15px 0px;
+    font-size: 18px;
 }
 
-#game-input input:focus {
-    outline: none;
+.operation-boxes {
+  margin-top: -50px;
 }
 
-#game-form {
-    margin-top: 50px;
-}
-
-/* Hide Spin BUtton */
-
-#game-input input::-webkit-inner-spin-button, 
-#game-input input::-webkit-outer-spin-button { 
+#user-input input::-webkit-inner-spin-button, 
+#user-input input::-webkit-outer-spin-button { 
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     margin: 0; 
 }
 
-#game-form label {
-    color: rgb(23, 109, 87);
-    font-size: 24px;
+#game-timer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom:0;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.btn.active {
-    border:3px rgb(23, 109, 87) solid;
-    text-shadow: 1px 1px 3px rgb(97, 240, 152);
+.game-timer-text {
+    font-size: 18rem;
 }
 
-#game-form input[type='radio'] {
-    display: none;
+/* .blur-away {
+    z-index: -2;
+    filter: blur(15px);
+    transition: ease-in 1s;
+} */
+
+#user-input {
+    border: 2px #FF99A0 solid;
+    padding: 8px;
+    background: transparent;
+    text-align: center;
+    color:#FF99A0;
 }
 
-/* Game Limit Form */
+#user-input:focus {
+    outline: none;
+}
 #limit-form {
     text-align: center;
-    width: 50%;
-    margin: 0 auto;
+    width: 80%;
+    margin: -20px auto 0 auto;
 }
+/* #limit-form span, #limit-form label {
+  display: inline-block;
+} */
 
 .limit-values, .limit-values-text {
     font-size: 20px;
     margin: 0;
+    margin-bottom: 10px;
+}
+
+.operation-selection {
+  display: block;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 #limit-form input {
@@ -74,7 +101,7 @@ h1 {
     width: 100%;
     display: block;
     margin: 0 auto;
-    background: linear-gradient(90deg, rgb(146, 34, 34) 0%, rgb(23, 109, 87) 50%);
+    background: linear-gradient(90deg, #BCB6FF 0%, #FF99A0 50%);
     border-radius: 30px;
     /* border: 2px solid #fff; */
 }
@@ -89,32 +116,4 @@ h1 {
 
 #limit-form input:focus {
     outline: none;
-}
-
-/* Game Timer */
-#game-timer {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    right: 0;
-    bottom:0;
-    z-index: -1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.game-timer-text {
-    font-size: 15rem;
-}
-
-.blur-away {
-    z-index: -2;
-    filter: blur(15px);
-    transition: ease-in 1s;
-}
-
-#game-data h2{
-    display: inline-block;
-    margin-left: 15px;
 }
